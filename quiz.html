@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Questionnaire — Reflective Quiz</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Art · Emotion · Mind</a>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="quiz.html" class="active">Questionnaire</a></li>
+          <li><a href="login.html">Login / Sign up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <h1>Reflective Questionnaire</h1>
+    <div id="auth-warning" class="notice" style="display:none;">
+      You must be logged in to take the questionnaire. <a href="login.html">Login / Sign up</a>
+    </div>
+
+    <div id="quiz-container" style="display:none;">
+      <p class="small">Answer honestly — this is for self-reflection.</p>
+      <form id="quiz-form">
+        <div class="question">
+          <p><strong>1.</strong> I find drawing or making art helps me calm down when I'm stressed.</p>
+          <label><input type="radio" name="q1" value="2" required> Strongly agree</label>
+          <label><input type="radio" name="q1" value="1"> Agree</label>
+          <label><input type="radio" name="q1" value="0"> Neutral / Unsure</label>
+          <label><input type="radio" name="q1" value="-1"> Disagree</label>
+        </div>
+
+        <div class="question">
+          <p><strong>2.</strong> Short guided meditation before art helps me focus better on my creative work.</p>
+          <label><input type="radio" name="q2" value="2" required> Strongly agree</label>
+          <label><input type="radio" name="q2" value="1"> Agree</label>
+          <label><input type="radio" name="q2" value="0"> Neutral</label>
+          <label><input type="radio" name="q2" value="-1"> Disagree</label>
+        </div>
+
+        <div class="question">
+          <p><strong>3.</strong> Creating a mandala (circular pattern) helps me feel centered.</p>
+          <label><input type="radio" name="q3" value="2" required> Strongly agree</label>
+          <label><input type="radio" name="q3" value="1"> Agree</label>
+          <label><input type="radio" name="q3" value="0"> Neutral</label>
+          <label><input type="radio" name="q3" value="-1"> Disagree</label>
+        </div>
+
+        <div class="question">
+          <p><strong>4.</strong> I would attend an art + meditation session if it was available to me.</p>
+          <label><input type="radio" name="q4" value="2" required> Definitely</label>
+          <label><input type="radio" name="q4" value="1"> Maybe</label>
+          <label><input type="radio" name="q4" value="0"> Not sure</label>
+          <label><input type="radio" name="q4" value="-1"> No</label>
+        </div>
+
+        <div class="question">
+          <p><strong>5.</strong> After a session I feel more aware of my emotions and why I feel them.</p>
+          <label><input type="radio" name="q5" value="2" required> Strongly agree</label>
+          <label><input type="radio" name="q5" value="1"> Agree</label>
+          <label><input type="radio" name="q5" value="0"> Neutral</label>
+          <label><input type="radio" name="q5" value="-1"> Disagree</label>
+        </div>
+
+        <div class="quiz-actions">
+          <button class="btn primary" type="submit">Submit</button>
+          <button type="button" class="btn ghost" id="clear-results">Clear my results</button>
+        </div>
+      </form>
+
+      <div id="result" class="result-card" style="display:none;"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year6"></span> Art · Emotion · Mind</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
